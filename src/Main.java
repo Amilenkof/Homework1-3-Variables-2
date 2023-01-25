@@ -12,7 +12,7 @@ public class Main {
 
 
     public static void task1 () {
-        System.out.println("Задача 1");
+        System.out.println("Задача  1");
        /*Задача 1
        Объявите переменные типа int, byte, short, long, float, double.
        Название переменных может быть любым, но если состоит из двух слов и более, должно соответствовать правилу camelCase.
