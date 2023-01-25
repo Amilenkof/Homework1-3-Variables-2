@@ -81,7 +81,7 @@ public class Main {
 Рассчитывайте производительность работы машины в том случае, если она работает без перерыва заданный промежуток времени.
 Результаты подсчетов выведите в консоль в формате: «За … машина произвела … штук бутылок».
 Для объявления переменных не используйте тип var.*/
-        int productTo2Min=16;
+        byte productTo2Min=16;
         int productTo20Min=productTo2Min*10;
         System.out.println("За 20 минут машина произвела "+productTo20Min +" штук бутылок");
         int productTo24Hours=productTo2Min*30*24;
@@ -97,9 +97,9 @@ public class Main {
 На ремонт школы нужно 120 банок краски двух цветов: белой и коричневой. На один класс уходит 2 банки белой и 4 банки коричневой краски. Сколько банок каждой краски было куплено?
 Выведите результат задачи в консоль в формате: «В школе, где … классов, нужно … банок белой краски и … банок коричневой краски».
 Для объявления переменных не используйте тип var.*/
-        int paintAll=120;
-        int paintWhitePerClass=2;
-        int paintBrownPerClass=4;
+        byte paintAll=120;
+        byte paintWhitePerClass=2;
+        byte paintBrownPerClass=4;
         int paintWhiteSum=paintAll*paintWhitePerClass/6;
         int paintBrownSum=paintAll*paintBrownPerClass/6;
         System.out.println("В школе, где 6 классов, нужно " + paintWhiteSum+" банок белой краски и " +paintBrownSum +" банок коричневой краски");
@@ -117,17 +117,17 @@ public class Main {
 Подсчитайте вес (количество граммов) такого спортзавтрака, а затем переведите его в килограммы.
 Результат в граммах и килограммах напечатайте в консоль.
 Важное условие: если в рецепт нужно добавить несколько единиц какого-то продукта (с определенным весом), то нужно умножать количество единиц на вес в граммах. Например, если в рецепте указано, что нужно добавить 5 бананов по 80 грамм, то нужно количество бананов (5) умножить на вес одного (80 грамм), а не считать самим общую сумму граммов..*/
-        int bananas =5;
-        int weight1Banana=80;
-        int milk=200;
-        int weight1Milk=105/100;
-        int iceCream=2;
-        int weight1Icecream=100;
-        int eggs=4;
-        int weight1Eggs=70;
-        int weightBreakfast =weight1Banana*bananas+weight1Milk*milk+weight1Icecream*iceCream+weight1Eggs*eggs;
+        byte bananas =5;
+        byte weight1Banana=80;
+        short milk=200;
+        float weight1Milk=105/100f;
+        byte iceCream=2;
+        byte weight1Icecream=100;
+        byte eggs=4;
+        byte weight1Eggs=70;
+        float weightBreakfast =weight1Banana*bananas+weight1Milk*milk+weight1Icecream*iceCream+weight1Eggs*eggs;
         System.out.println("Вес завтрака "+weightBreakfast + " грамм");
-        double weightBreakfastKg= weightBreakfast/1000;
+        double weightBreakfastKg= weightBreakfast/1000d;
         System.out.println("Вес завтрака "+ weightBreakfastKg + " киллограмм");
 
 
@@ -139,9 +139,9 @@ public class Main {
 Посчитайте, сколько дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм, а сколько — если каждый день будет худеть на 500 грамм.
 Посчитайте, сколько может потребоваться дней в среднем, чтобы добиться результата похудения.
 Результаты всех подсчетов выведите в консоль. */
-        int weighPlayerTarget=7;
-        int slowWeightLow= 250;
-        int fastWeghtLow=500;
+        byte weighPlayerTarget=7;
+        short slowWeightLow= 250;
+        short fastWeghtLow=500;
         int durSlow=weighPlayerTarget*1000/slowWeightLow;
         System.out.println(durSlow + " дней до цели если терять 250 грамм в день");
         int durFast=weighPlayerTarget*1000/fastWeghtLow;
