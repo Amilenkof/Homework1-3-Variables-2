@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -146,11 +148,13 @@ public class Main {
         System.out.println(durSlow + " дней до цели если терять 250 грамм в день");
         int durFast=weighPlayerTarget*1000/fastWeghtLow;
         System.out.println(durFast + " дней до цели если терять 500 грамм в день");
-        int medTime=(durFast+durSlow)/2;
-        System.out.println("В среднем понадобится "+medTime+" дней для достижения цели");
+        double medCalosriesLost=(slowWeightLow+fastWeghtLow)/2;
+        double medTime=(weighPlayerTarget*1000)/medCalosriesLost;
+
+        System.out.printf("В среднем понадобится %.2f%n" , medTime,"Дней для похуйдения %n");
 
     }public static void task8 () {
-        System.out.println("Задача 8");
+        System.out.println(" Задача 8");
        /* Задача 8
 Представим, что мы работаем в большой компании, штат которой состоит из нескольких сотен сотрудников. В компании есть правило: чем дольше сотрудник работает в компании,
 тем ценнее он для бизнеса. Поэтому сотрудники, которые работают в компании дольше 3 лет, получают повышение зарплаты раз в год. Каждый год повышение составляет 10% от текущей зарплаты.
@@ -161,18 +165,18 @@ public class Main {
 Каждому нужно увеличить зарплату на 10% от текущей месячной. Дополнительно руководитель попросил посчитать разницу между годовым доходом с нынешней зарплатой и после повышения.
 Посчитайте, сколько будет получать каждый из сотрудников, а также разницу между годовым доходом до и после повышения.
 Выведите в консоль информацию по каждому сотруднику. Например: «Маша теперь получает ... рублей. Годовой доход вырос на ... рублей». */
-        int mashaWage=67760;
-        int denisWage=83690;
-        int kristinaWage=76230;
+        int mashaWage=67_760;
+        int denisWage=83_690;
+        int kristinaWage=76_230;
         double newMashaWage=mashaWage*1.1;
         double newDenisWage=denisWage*1.1;
         double newKristinaWage=kristinaWage*1.1;
-        double difMashaWage=newMashaWage-mashaWage;
-        double difDenisWage=newDenisWage-denisWage;
-        double difKristinaWage=newKristinaWage-kristinaWage;
-        System.out.println("Маша теперь получает " +newMashaWage+ " рублей. Годовой доход вырос на "+difMashaWage+ " рублей");
-        System.out.println("Денис теперь получает " +newDenisWage+ " рублей. Годовой доход вырос на "+difDenisWage+ " рублей");
-        System.out.println("Кристина теперь получает " +newKristinaWage+ " рублей. Годовой доход вырос на "+difKristinaWage+ " рублей");
+        double difMashaWage=newMashaWage*12-mashaWage*12;
+        double difDenisWage=newDenisWage*12-denisWage*12;
+        double difKristinaWage=newKristinaWage*12-kristinaWage*12;
+        System.out.printf(Locale.US,"Маша теперь получает %.2f  рублей. Годовой доход вырос на %.2f  рублей %n", newMashaWage,difMashaWage);
+        System.out.printf(Locale.US,"Денис теперь получает %.2f  рублей. Годовой доход вырос на %.2f  рублей %n", newDenisWage,difDenisWage);
+        System.out.printf(Locale.US,"Кристина теперь получает %.2f  рублей. Годовой доход вырос на %.2f  рублей %n", newKristinaWage,difKristinaWage);
 
     }
 
